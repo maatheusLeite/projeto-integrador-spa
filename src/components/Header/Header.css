@@ -1,0 +1,103 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.sahitya {
+    font-family: 'Sahitya';
+}
+
+.nav-item {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #1BB294;
+    font-family: 'Sahitya';
+    margin: 0px 27px;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: #DE4B44;
+    transition: .3s;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #111D1D;
+    padding: 5px;
+    width: 100vw;    
+    box-shadow: 0px 5px 10px #0003;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #DE4B44;
+    cursor: pointer;
+    line-height: 38px;
+    font-size: 2.2em;
+    font-family: 'Sahitya';
+}
+
+.user-name {
+    color: #fff;
+    margin: 0px 10px;
+    line-height: 25px;
+    font-size: 1.2em;
+    font-family: 'Sahitya';
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn-config {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    background-color: #1BB294;
+    color: #111D1D;
+    border: none;
+    border-radius: 100px;
+    margin: 0px 20px;
+    font-size: 1em;
+}
+
+.btn-config:hover {
+    background-color: #DE4B44;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 25px;
+    background-color: #111D1D;
+    color: #1BB294;
+    border: solid 2px #1BB294;
+    border-radius: 100px;
+    font-size: 1em;
+}
+
+.btn-exit:hover {
+    background-color: #DE4B44;
+    border-color: #DE4B44;
+    color: #111D1D;
+    cursor: pointer;
+    transition: .3s;
+}

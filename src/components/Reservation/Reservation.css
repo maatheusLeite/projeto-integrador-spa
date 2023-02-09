@@ -1,0 +1,37 @@
+.reservation-card {
+    width: 410;
+    height: 285;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #111D1D;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #0003;
+    margin: 50px;
+}
+
+.reservation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.card-item {
+    color: #F8FAFF;
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+.btn-delete {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'Sahitya Bold';
+    font-size: 1.3em;
+    color: #F8FAFF;
+    background-color: #DE4B44;
+    border: none;
+}
