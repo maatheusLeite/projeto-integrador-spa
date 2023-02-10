@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url("../../assets/images/Pizza.jpg");
-    background-size: 100vw 150vh;
+    background-size: 100vw 155vh;
     overflow-x: hidden;
     background-position-y: -430px;
     background-repeat: no-repeat;
@@ -43,10 +43,10 @@
     margin-bottom: 35px;
 }
 
-.btn-menu {
+.btn-menu,
+.btn-reservations {
     width: 220px;
     height: 52px;
-    background-color: #781A16;
     border: none;
     border-radius: 12px;
     font-family: 'Sahitya';
@@ -55,6 +55,10 @@
     color: #F8FAFF;
     margin: 0 15px;
     cursor: pointer;
+}
+
+.btn-menu {
+    background-color: #781A16;
 }
 
 .btn-menu:hover {
@@ -63,17 +67,7 @@
 }
 
 .btn-reservations {
-    width: 220px;
-    height: 52px;
     background-color: #00261F;
-    border: none;
-    border-radius: 12px;
-    font-family: 'Sahitya';
-    font-size: 1.2em;
-    font-weight: 100;
-    color: #F8FAFF;
-    margin: 0 15px;
-    cursor: pointer;
 }
 
 .btn-reservations:hover {

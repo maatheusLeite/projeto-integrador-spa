@@ -1,0 +1,121 @@
+body {
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 1.1em;
+    margin: 0px 20px;
+}
+
+.input-container {
+    width: 500px;
+    margin: 0px 50px;
+}
+
+.input-box {
+    height: 40px;
+    width: 45px;
+    border-radius: 5px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    box-shadow: 1px 4px 20px #00000016;
+    margin: -100px 10px 40px;
+    padding: 0 10px;
+}
+
+.input-box-date {
+    height: 40px;
+    width: 190px;
+    border-radius: 5px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    box-shadow: 1px 4px 20px #00000016;
+    margin: -100px 28px 40px;
+    padding: 0px 10px;
+}
+
+.central-line {
+    width: 2px;
+    height: 68vh;
+    background-color: #111D1D;
+    color: transparent;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 25vh;
+}
+
+.reservas-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.reservas-title {
+    font-family: 'Sahitya';
+    color: #111D1D;
+    font-size: 2.1em;
+    font-weight: 100;
+    width: 300px;
+    text-align: center;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-family: 'Sahitya';
+    color: #111D1D;
+    font-weight: 100;
+    margin-top: 10vh;
+}
+
+.left-container,
+.right-container {
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    width: 600px;
+    overflow: scroll;
+}
+
+.left-container {
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.7em;
+    color: #76ADA3;
+}
+ 
+.right-container {
+    justify-content: center;
+    font-family: 'Sahitya';
+    align-items: flex-start;
+}
+
+.center {
+    font-family: 'Sahitya';
+    text-align: center;
+    padding-top: 40%;
+}
+
+.btn-register {
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Sahitya';
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #F8FAFF;
+    cursor: pointer;
+    background-color: #00735C;
+    align-self: center;
+    margin: 10px 0;
+}

@@ -1,6 +1,6 @@
 .reservation-card {
-    width: 410;
-    height: 285;
+    width: 400px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,7 +8,7 @@
     background-color: #111D1D;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #0003;
-    margin: 50px;
+    margin: 100px 0px -20px;
 }
 
 .reservation-info {
@@ -20,17 +20,17 @@
 
 .card-item {
     color: #F8FAFF;
-    margin: 10px;
-    font-size: 1.1em;
+    margin: 20px 10px 5px;
+    font-size: 1.1rem;
 }
 
 .btn-delete {
     width: 150px;
-    height: 40px;
+    height: 45px;
     border-radius: 10px;
     margin-bottom: 20px;
     font-family: 'Sahitya Bold';
-    font-size: 1.3em;
+    font-size: 1.2rem;
     color: #F8FAFF;
     background-color: #DE4B44;
     border: none;
