@@ -1,0 +1,82 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/images/Pizza.jpg");
+    background-size: 100vw 150vh;
+    overflow-x: hidden;
+    background-position-y: -430px;
+    background-repeat: no-repeat;
+}
+
+.main-card {
+    margin-top: 20vh;
+    width: 100vw;
+    height: 58vh;
+    background-color: #0000007c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 120px #000000ef;
+}
+
+.title {
+    width: 350px;
+    color: #F8FAFF;
+    font-family: 'Sahitya';
+    font-size: 5em;
+    font-weight: 100;
+    line-height: 90px;
+    margin: -75px 0 -85px;
+}
+
+.description {
+    color: #F8FAFF;
+    font-family: 'Sahitya';
+    font-size: 1.6em;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+}
+
+.butons {
+    margin-bottom: 35px;
+}
+
+.btn-menu {
+    width: 220px;
+    height: 52px;
+    background-color: #781A16;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Sahitya';
+    font-size: 1.2em;
+    font-weight: 100;
+    color: #F8FAFF;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.btn-menu:hover {
+    background-color: #9F2B25;
+    transition: .3s;
+}
+
+.btn-reservations {
+    width: 220px;
+    height: 52px;
+    background-color: #00261F;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Sahitya';
+    font-size: 1.2em;
+    font-weight: 100;
+    color: #F8FAFF;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.btn-reservations:hover {
+    background-color: #004D3D;
+    transition: .3s;
+}

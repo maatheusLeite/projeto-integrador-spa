@@ -29,7 +29,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #111D1D;
+    background-color: #0a1111ea;
     padding: 5px;
     width: 100vw;    
     box-shadow: 0px 5px 10px #0003;
@@ -87,7 +87,7 @@ nav {
     justify-content: center;
     width: 70px;
     height: 25px;
-    background-color: #111D1D;
+    background-color: transparent;
     color: #1BB294;
     border: solid 2px #1BB294;
     border-radius: 100px;

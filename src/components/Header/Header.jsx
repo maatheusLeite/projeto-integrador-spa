@@ -13,12 +13,11 @@ export default function Header(props) {
                 </h2>
             </Link>
             
-
             <nav>
                 <Link to='/' className='nav-item'> HOME </Link>
-                <span className='nav-item'> CARDÁPIO </span>
+                <Link to='/cardapio' className='nav-item'> CARDÁPIO </Link>
                 <Link to="/reservas" className='nav-item'> RESERVAS </Link>
-                <span className='nav-item'> CONTATO </span>
+                <Link to='/contato' className='nav-item'> CONTATO </Link>
             </nav>
                 
             {(
