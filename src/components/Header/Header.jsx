@@ -23,14 +23,14 @@ export default function Header(props) {
             {(
                 props.userName === '' || props.userName === null ? 
                     <div className='user-info'>
-                        <button className='btn-config'> <span className='sahitya'> Cadastrar </span> </button>
+                        <button className='btn-config'><span className='sahitya'> Cadastrar </span></button>
                         <button className='btn-exit'> <span className='sahitya'> Entrar </span> </button>
                     </div>
                 :
                     <div className='user-info'>
                         <span className='user-name'> {props.userName} </span>
-                        <button className='btn-config'> <span className='sahitya'> Meu Perfil </span> </button>
-                        <button className='btn-exit'> <span className='sahitya'> Sair </span> </button>
+                        <Link to='/usuario' className='link btn-config sahitya'> Meu Perfil </Link>
+                        <Link to='/' className='link btn-exit sahitya'> Sair </Link>
                     </div>
             )}
         </header>

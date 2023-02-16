@@ -34,4 +34,10 @@
     color: #F8FAFF;
     background-color: #DE4B44;
     border: none;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: #9F2B25;
+    transition: .3s;
 }

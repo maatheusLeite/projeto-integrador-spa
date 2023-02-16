@@ -74,3 +74,18 @@
     background-color: #004D3D;
     transition: .3s;
 }
+
+@media (max-width: 1500px) {
+    .home-container {
+        background-size: 100vw 200vh;
+        background-position-y: -130px;
+    }
+
+    .title {
+        font-size: 4em;
+        line-height: 70px;
+        margin-bottom: 5px;
+    }
+
+
+}

@@ -59,6 +59,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 25px;
 }
 
 .btn-config {
@@ -66,10 +67,10 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 25px;
+    height: 22px;
     background-color: #1BB294;
     color: #111D1D;
-    border: none;
+    border: solid 2px #1BB294;
     border-radius: 100px;
     margin: 0px 20px;
     font-size: 1em;
@@ -77,6 +78,7 @@ nav {
 
 .btn-config:hover {
     background-color: #DE4B44;
+    border-color: #DE4B44;
     cursor: pointer;
     transition: .3s;
 }
@@ -86,7 +88,7 @@ nav {
     align-items: center;
     justify-content: center;
     width: 70px;
-    height: 25px;
+    height: 22px;
     background-color: transparent;
     color: #1BB294;
     border: solid 2px #1BB294;

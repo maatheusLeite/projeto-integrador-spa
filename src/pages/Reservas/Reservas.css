@@ -30,15 +30,27 @@ label {
     padding: 0 10px;
 }
 
+.select-box {
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    box-shadow: 1px 4px 20px #00000016;
+    margin: -100px 27px 40px;
+    padding: 0 10px;
+}
+
 .input-box-date {
     height: 40px;
-    width: 190px;
+    width: 130px;
     border-radius: 5px;
     border: solid 1px #EDE8E8;
     background-color: #F8FAFF;
     box-shadow: 1px 4px 20px #00000016;
     margin: -100px 28px 40px;
     padding: 0px 10px;
+    cursor: text;
 }
 
 .central-line {
@@ -118,4 +130,21 @@ label {
     background-color: #00735C;
     align-self: center;
     margin: 10px 0;
+}
+
+.btn-register:hover {
+    background-color: #004D3D;
+    transition: .3s;
+}
+
+.btn-register:disabled {
+    background-color: #556763;
+}
+
+.error-message {
+    color: #F00;
+}
+
+@media (max-width: 1500px) {
+    
 }

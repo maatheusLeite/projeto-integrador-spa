@@ -1,0 +1,39 @@
+h4 {
+    font-size: 1.6em;
+    font-family: 'Sahitya';
+    color: #111D1D;
+    margin-top: -10px;
+}
+
+.usuario-container,
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-card {
+    box-shadow: 5px 4px 20px #00000040;
+}
+
+.welcome {
+    color: #111D1D;
+    margin: 8vh 50px 70px;
+    font-size: 2em;
+    font-family: 'Sahitya';
+}
+
+.user-card {
+    width: 450px;
+    height: 320px;
+    background-color: #F8FAFF;
+    border: solid 2px #111D1D;
+    border-radius: 40px;
+}
+
+.user-item {
+    width: 300px;
+    color: #000;
+    font-size: 1.1em;
+}

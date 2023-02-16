@@ -17,7 +17,7 @@ export default function Home({user}) {
                 <p className='description'> 
                     Diversos pratos classicos da cozinha italiana feitos de maneira fiel e <br />
                     minuciosa, para satisfazer até o mais exigente e <br />
-                    refinado paladar paladar.
+                    refinado paladar.
                 </p>
 
                 <div className='butons'>
