@@ -3,8 +3,12 @@ import Home from './pages/Home/Home';
 import Reservas from './pages/Reservas/Reservas';
 import Usuario from './pages/Usuario/Usuario';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CancelarReserva from './pages/CancelarReserva/CancelarReserva';
 
 export default function App() {
+
+  const user = {}
+  const reservation = {}
 
   const user1 = {
     id: 1,
@@ -33,9 +37,10 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home user={user2} />} />
-        <Route path='/reservas' element={<Reservas user={user2} />} />
-        <Route path='/usuario' element={<Usuario user={user2} />} />
+        <Route path='/' state={user1} element={<Home user={user1}/>} />
+        <Route path='/reservas' state={user1} element={<Reservas />} />
+        <Route path={'/reservas/cancelar'} state={user1} element={<CancelarReserva />} />
+        <Route path='/usuario' state={user1} element={<Usuario />} />
       </Routes>
     </Router>
   );

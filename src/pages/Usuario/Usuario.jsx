@@ -1,8 +1,12 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import './Usuario.css'
 
-export default function Usuario({user}) {
+export default function Usuario() {
+
+    const location = useLocation()
+    const user = location.state
 
     function formatPhone(phone) {
         let formatedPhone;
@@ -19,7 +23,7 @@ export default function Usuario({user}) {
 
     return (
         <div>
-            <Header userName={user.name} />
+            <Header user={user} />
 
             <main className='usuario-container'>
                 <h3 className='welcome'> Seja bem vindo(a) {user.name} </h3>

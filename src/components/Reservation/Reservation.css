@@ -1,5 +1,5 @@
 .reservation-card {
-    width: 400px;
+    width: 450px;
     height: 280px;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,9 @@
 }
 
 .btn-delete {
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
     width: 150px;
     height: 45px;
     border-radius: 10px;

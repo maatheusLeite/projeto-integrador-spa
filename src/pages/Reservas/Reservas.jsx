@@ -3,8 +3,12 @@ import './Reservas.css'
 import Header from '../../components/Header/Header'
 import Reservation from '../../components/Reservation/Reservation'
 import axios from 'axios'
+import { useLocation } from 'react-router-dom'
 
-export default function Reservas({user}) {
+export default function Reservas() {
+
+    const location = useLocation()
+    const user = location.state
 
     const [reservations, setReservations] = useState([])
     const [peopleAmount, setPeopleAmount] = useState(1)
@@ -26,7 +30,7 @@ export default function Reservas({user}) {
             
             response.data.forEach(reservation => {
                 if (reservation.client.id === user.id) {
-                    reservation.client = undefined // Hide the user information from every reservation
+                    reservation.client.password = undefined // Hide the user information from every reservation
                     userReservations.push(reservation)
                 }
             })
@@ -73,7 +77,7 @@ export default function Reservas({user}) {
 
     return (
         <div>
-            <Header userName={user.name} />
+            <Header user={user} />
 
             <div className='central-line'></div>
             <div className='titles'> 

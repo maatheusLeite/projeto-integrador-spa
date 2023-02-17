@@ -1,0 +1,59 @@
+.cancelar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-cancel,
+.btn-go-back {
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    font-family: 'Sahitya Bold';
+    font-size: 1.2rem;
+    color: #F8FAFF;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background-color: #DE4B44;
+}
+
+.btn-cancel:hover {
+    background-color: #9F2B25;
+    transition: .3s;
+}
+
+.btn-go-back {
+    background-color: #00261F;
+}
+
+.btn-go-back:hover {
+    background-color: #004D3D;
+    transition: .3s;
+}
+
+.warning {
+    margin: 10vh 0 5vh;
+    color: #F00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.warning-text {
+    margin: 5px;
+}

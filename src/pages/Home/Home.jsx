@@ -1,13 +1,16 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './Home.css'
 
 export default function Home({user}) {
 
+    // const location = useLocation()
+    // const user = location.state
+
     return (
         <div className='home-container'>
-            <Header className='header' userName={user.name} />
+            <Header className='header' user={user} />
             <main className='main-card'>
                 <h1 className='title'> 
                     <span> DON </span>
@@ -21,8 +24,8 @@ export default function Home({user}) {
                 </p>
 
                 <div className='butons'>
-                    <Link to='/cardapio'><button className='btn-menu'> NOSSO CARDÁPIO </button></Link>
-                    <Link to='/reservas'><button className='btn-reservations'> RESERVAR HORARIO </button></Link>
+                    <Link to='/cardapio' state={user} ><button className='btn-menu'> NOSSO CARDÁPIO </button></Link>
+                    <Link to='/reservas' state={user} ><button className='btn-reservations'> RESERVAR HORARIO </button></Link>
                 </div>
             </main>
         </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
 
-export default function Header(props) {
+export default function Header({user}) {
 
     return (
         <header className='header-container'>
@@ -14,23 +14,23 @@ export default function Header(props) {
             </Link>
             
             <nav>
-                <Link to='/' className='nav-item'> HOME </Link>
-                <Link to='/cardapio' className='nav-item'> CARDÁPIO </Link>
-                <Link to="/reservas" className='nav-item'> RESERVAS </Link>
-                <Link to='/contato' className='nav-item'> CONTATO </Link>
+                <Link to='/' state={user} className='nav-item'> HOME </Link>
+                <Link to='/cardapio' state={user} className='nav-item'> CARDÁPIO </Link>
+                <Link to='/reservas' state={user} className='nav-item'> RESERVAS </Link>
+                <Link to='/contato' state={user} className='nav-item'> CONTATO </Link>
             </nav>
                 
             {(
-                props.userName === '' || props.userName === null ? 
+                user === undefined || user === null ? 
                     <div className='user-info'>
                         <button className='btn-config'><span className='sahitya'> Cadastrar </span></button>
                         <button className='btn-exit'> <span className='sahitya'> Entrar </span> </button>
                     </div>
                 :
                     <div className='user-info'>
-                        <span className='user-name'> {props.userName} </span>
-                        <Link to='/usuario' className='link btn-config sahitya'> Meu Perfil </Link>
-                        <Link to='/' className='link btn-exit sahitya'> Sair </Link>
+                        <span className='user-name'> {user.name} </span>
+                        <Link to='/usuario' state={user} className='link btn-config sahitya'> Meu Perfil </Link>
+                        <Link to='/' state={user} className='link btn-exit sahitya'> Sair </Link>
                     </div>
             )}
         </header>
