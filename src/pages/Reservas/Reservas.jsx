@@ -30,7 +30,7 @@ export default function Reservas() {
             
             response.data.forEach(reservation => {
                 if (reservation.client.id === user.id) {
-                    reservation.client.password = undefined // Hide the user information from every reservation
+                    hideClientPassword(reservation.client)
                     userReservations.push(reservation)
                 }
             })
@@ -40,6 +40,10 @@ export default function Reservas() {
 
         fetchReservations();
     }, [])
+
+    function hideClientPassword(client) {
+        client.password = undefined 
+    }
 
     const addReservation = async (peopleAmount, bookedDate) => {
         const generationMoment = new Date().toISOString().split('.')[0]+'Z'
@@ -60,18 +64,18 @@ export default function Reservas() {
         alert('Reserva cadastrada!')
     } 
 
+    function setFinalDate() {
+        if(bookedDate !== '') {
+            const finalDate = bookedDate.valueOf().split('T')[0] + bookedHour
+            return finalDate
+        }
+    }
+
     const handleBookedDate = (e) => {
         setBookedDate(e.target.value)
         if(bookedDate.valueOf() === '') {
             setDisabled(false)
             setButtonText('Reservar')
-        }
-    }
-
-    function setFinalDate() {
-        if(bookedDate !== '') {
-            const finalDate = bookedDate.valueOf().split('T')[0] + bookedHour
-            return finalDate
         }
     }
 
@@ -117,12 +121,12 @@ export default function Reservas() {
                         <div className='input-container'>
                             <label htmlFor=""> Data a ser reservada: </label>
                             <input 
+                                type="date" 
                                 id='bookedDate' 
                                 name='bookedDate' 
                                 value={bookedDate}
                                 min={minDate} 
                                 onChange={handleBookedDate} 
-                                type="date" 
                                 className='input-box-date'
                             />
                         </div>

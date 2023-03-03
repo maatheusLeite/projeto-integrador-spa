@@ -1,0 +1,81 @@
+label {
+    margin: 2px 10px;
+}
+
+.form-container,
+.input-container-2 {
+    font-family: 'Sahitya';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.form-container {
+    margin-top: 12vh;
+}
+
+.input-container-2 {
+    align-items: flex-start;
+    width: 300px;
+    margin: 20px;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.input {
+    height: 48px;
+    width: 300px;
+    border-radius: 5px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    box-shadow: 1px 4px 20px #00000016;
+    margin: 5px 0;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.form-title {
+    font-family: 'Sahitya';
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #111D1D;
+}
+
+.btn-action {
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00735C;
+    box-shadow: 1px 4px 20px #00000016;
+    color: #FFF;
+    font-size: 1.2em;
+    font-family: 'Sahitya';
+    margin: 20px;
+    cursor: pointer;
+}
+
+.btn-action:hover {
+    background-color: #004D3D;
+    transition: .3s;
+}
+
+.btn-action:disabled {
+    background-color: #556763;
+    transition: .3s;
+}
+
+.btn-visible {
+    cursor: pointer;
+    margin: 0 10px;
+    height: 20px;
+    align-self: center;
+}

@@ -25,6 +25,7 @@
     color: #F8FAFF;
     border: none;
     cursor: pointer;
+    box-shadow: 5px 5px 10px #0003;;
 }
 
 .btn-cancel {

@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header'
 import { Link, useLocation } from 'react-router-dom'
 import './Home.css'
 
-export default function Home({user}) {
+export default function Home() {
 
-    // const location = useLocation()
-    // const user = location.state
+    const [reservasPagePath, setReservasPagePath] = useState('')
+
+    useEffect(() => {
+        checkLogedUser()
+    })
+
+    function checkLogedUser() {
+        if (user !== null) {
+            setReservasPagePath('/reservas')
+        }
+        else {
+            setReservasPagePath('/entrar')
+        }
+    }
+
+    const location = useLocation()
+    const user = location.state
 
     return (
         <div className='home-container'>
@@ -25,7 +40,7 @@ export default function Home({user}) {
 
                 <div className='butons'>
                     <Link to='/cardapio' state={user} ><button className='btn-menu'> NOSSO CARDÁPIO </button></Link>
-                    <Link to='/reservas' state={user} ><button className='btn-reservations'> RESERVAR HORARIO </button></Link>
+                    <Link to={reservasPagePath} state={user} ><button className='btn-reservations'> RESERVAR HORARIO </button></Link>
                 </div>
             </main>
         </div>
