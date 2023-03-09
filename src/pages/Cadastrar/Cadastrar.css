@@ -1,0 +1,86 @@
+.register-container,
+.register-input-container  {
+    font-family: 'Sahitya';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.register-container {
+    margin-top: 8vh;
+}
+
+.register-input-container {
+    align-items: flex-start;
+    width: 315px;
+    margin: 10px;
+}
+
+
+.register-title {
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #111D1D;
+}
+
+.register-input {
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    box-shadow: 1px 4px 20px #00000016;
+    margin: 5px 0;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.phone-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.ddd-input,
+.phone-input {
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    box-shadow: 1px 4px 20px #00000016;
+    margin: 5px 0;
+    padding: 0px 10px;
+    font-size: 1rem;
+}
+
+.ddd-input {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.phone-input {
+    width: 218px;
+
+}
+
+.color-2 {
+    color: #004D3D;
+}
+
+.color-2:hover {
+    color: #DE4B44;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.error-message-2 {
+    color: #F00;
+    align-self: center;
+    margin-top: -10px;
+}

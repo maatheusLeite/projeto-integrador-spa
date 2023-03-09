@@ -18,7 +18,7 @@ export default function CancelarReserva() {
         baseURL: "http://localhost:8080/reservations"
     })
 
-    const deleteReservation = async (id) => {
+    async function deleteReservation(id) {
         await axiosClient.delete(`${id}`)
         alert('Reserva cancelada com sucesso!')
         navigate('/reservas', {state: user})

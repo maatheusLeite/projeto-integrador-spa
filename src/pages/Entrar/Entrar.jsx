@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Entrar.css'
 import Header from '../../components/Header/Header'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 
@@ -11,6 +11,7 @@ export default function Entrar() {
     const [password, setPassword] = useState('')
     const [visible, setVisible] = useState(false)
     const [passwordType, setPasswordType] = useState('Password')
+    const [errorMessage, setErrorMessage] = useState('')
 
     const location = useLocation()
     const user = location.state
@@ -23,6 +24,7 @@ export default function Entrar() {
     
     function handleSubmit(event) {
         event.preventDefault()
+        setErrorMessage('')
         logIn()
     }
 
@@ -30,11 +32,13 @@ export default function Entrar() {
         let response = await axiosClient.get()
         const users = response.data
 
-        const userToBeLogedIn = { email: email, password: password }
+        const userToBeLogedIn = { email: email.toLowerCase(), password: password }
 
         users.forEach(user => {
             validateUser(user, userToBeLogedIn)
-        })        
+        })      
+        
+        setErrorMessage("Usuário ou senha incorretos")
     }
 
     function validateUser(user, testUser) {
@@ -105,12 +109,16 @@ export default function Entrar() {
                             }
                         </div>
                     </div>
+
+                    <span className='error-message'> {errorMessage} </span>
                 </div>
 
                 <button 
                     className='btn-action'
                     onClick={() => handleSubmit}
                 > Entrar </button>
+
+                <Link to='/cadastrar' className='link color-2'> Não possuo cadastro </Link>
             </form>
         </div>
     )

@@ -77,10 +77,6 @@ nav {
     font-size: 1em;
 }
 
-.btn-login {
-    height: 26px;
-}
-
 .btn-login:hover,
 .btn-config:hover {
     background-color: #DE4B44;

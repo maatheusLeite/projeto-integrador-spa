@@ -14,7 +14,7 @@ export default function Reservas() {
     const [peopleAmount, setPeopleAmount] = useState(1)
     const [bookedDate, setBookedDate] = useState('')
     const [bookedHour, setBookedHour] = useState('T18:00:00Z')
-    const [disabled, setDisabled] = useState(true)
+    const [disabledButton, setDisabledButton] = useState(true)
     const [buttonText, setButtonText] = useState('Data invalida')
 
     const minDate = new Date().toISOString().split('T')[0]
@@ -24,28 +24,41 @@ export default function Reservas() {
     })
 
     useEffect(() => {
-        const fetchReservations = async () => {
-            let response = await axiosClient.get()
-            const userReservations = []
-            
-            response.data.forEach(reservation => {
-                if (reservation.client.id === user.id) {
-                    hideClientPassword(reservation.client)
-                    userReservations.push(reservation)
-                }
-            })
-            
-            setReservations(userReservations);
-        }
+        loadReservations()
+    })
 
-        fetchReservations();
-    }, [])
+    async function loadReservations() {
+        let response = await axiosClient.get()
+        const userReservations = []
+        
+        response.data.forEach(reservation => {
+            if (reservation.client.id === user.id) {
+                hideClientPassword(reservation.client)
+                userReservations.push(reservation)
+            }
+        })
+        
+        setReservations(userReservations)
+    } 
 
     function hideClientPassword(client) {
         client.password = undefined 
     }
 
-    const addReservation = async (peopleAmount, bookedDate) => {
+    function handleSubmit(event)  {
+        event.preventDefault()
+        const finalDate = getFinalDate()
+        addReservation(peopleAmount, finalDate)
+        alert('Reserva cadastrada!')
+    } 
+
+    function getFinalDate() {
+        if(bookedDate !== '') {
+            return bookedDate.valueOf().split('T')[0] + bookedHour
+        }
+    }
+
+    async function addReservation(peopleAmount, bookedDate) {
         const generationMoment = new Date().toISOString().split('.')[0]+'Z'
         
         let response = await axiosClient.post('', {
@@ -54,27 +67,14 @@ export default function Reservas() {
             bookedDate: bookedDate,
             client: user
         })
+        
         setReservations((reservations) => [response.data, ...reservations])
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const finalDate = setFinalDate()
-        addReservation(peopleAmount, finalDate)
-        alert('Reserva cadastrada!')
-    } 
-
-    function setFinalDate() {
-        if(bookedDate !== '') {
-            const finalDate = bookedDate.valueOf().split('T')[0] + bookedHour
-            return finalDate
-        }
-    }
-
-    const handleBookedDate = (e) => {
-        setBookedDate(e.target.value)
+    function handleBookedDate(event) {
+        setBookedDate(event.target.value)
         if(bookedDate.valueOf() === '') {
-            setDisabled(false)
+            setDisabledButton(false)
             setButtonText('Reservar')
         }
     }
@@ -140,7 +140,7 @@ export default function Reservas() {
                                 onChange={(event) => setBookedHour(event.target.value)}
                                 className='select-box'
                             >
-                                {/* The value is 3 hours adjusted to Brazilia time zone */}
+                                {/* Thease values are 3 hours adjusted to brasilia time zone */}
                                 <option value="T18:00:00Z"> 15:00 h </option>
                                 <option value="T19:00:00Z"> 16:00 h </option>
                                 <option value="T20:00:00Z"> 17:00 h </option>
@@ -151,7 +151,7 @@ export default function Reservas() {
                             </select>
                         </div>
 
-                        <button disabled={disabled} className='btn-register'> {buttonText} </button>
+                        <button disabled={disabledButton} className='btn-register'> {buttonText} </button>
                     </form>
                 </div>
             </main>

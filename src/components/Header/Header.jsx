@@ -38,7 +38,7 @@ export default function Header({user}) {
             {(
                 user === undefined || user === null ? 
                     <div className='user-info'>
-                        <button className='btn-login'><span className='sahitya'> Cadastrar </span></button>
+                        <Link to='/cadastrar' className='link btn-login sahitya'> Cadastrar </Link>
                         <Link to='/entrar' className='link btn-exit sahitya'> Entrar </Link>
                     </div>
                 :

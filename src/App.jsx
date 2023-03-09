@@ -5,6 +5,7 @@ import Usuario from './pages/Usuario/Usuario'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CancelarReserva from './pages/CancelarReserva/CancelarReserva'
 import Entrar from './pages/Entrar/Entrar'
+import Cadastrar from './pages/Cadastrar/Cadastrar'
 
 export default function App() {
   return (
