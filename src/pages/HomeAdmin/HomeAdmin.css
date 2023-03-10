@@ -1,0 +1,63 @@
+.admin-reservations-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+.admin-reservations-message {
+    font-size: 1.7em;
+    color: #76ADA3;
+    margin: 300px 38%;
+    text-align: center;
+}
+
+.admin-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #111D1D;
+}
+
+.admin-title {
+    font-family: 'sahitya';
+}
+
+.transparent {
+    color: transparent;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'sahitya';
+    font-size: 1.3em;
+    margin: 15px 0px 60px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.black {
+    color: #111D1D;
+}
+
+.admin-input {
+    height: 30px;
+    padding: 2px 5px;
+    margin: 0px 15px 0px 10px;
+    border-radius: 10px;
+    border: solid 1px #EDE8E8;
+    background-color: #F8FAFF;
+    color: #9D9D9D;
+}
+
+.highlight-color {
+    color: #00735C;
+}

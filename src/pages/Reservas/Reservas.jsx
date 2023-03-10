@@ -3,10 +3,11 @@ import './Reservas.css'
 import Header from '../../components/Header/Header'
 import Reservation from '../../components/Reservation/Reservation'
 import axios from 'axios'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export default function Reservas() {
 
+    const navigate = useNavigate()
     const location = useLocation()
     const user = location.state
 
@@ -24,8 +25,15 @@ export default function Reservas() {
     })
 
     useEffect(() => {
+        verifyLogin()
         loadReservations()
     })
+
+    function verifyLogin() {
+        if(user === null) {
+            navigate('/entrar')
+        }
+    }
 
     async function loadReservations() {
         let response = await axiosClient.get()
@@ -94,7 +102,6 @@ export default function Reservas() {
 
                     {(
                         reservations[0] == null ?
-
                             <span className='center'> Você não possui reservas no momento. </span>
                         : 
                             reservations.map(reservation => <Reservation reservation={reservation}/>)

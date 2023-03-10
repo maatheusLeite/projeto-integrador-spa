@@ -1,0 +1,65 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(180deg, #004d3d 0%, #004d3d 0%, #182624 100%);
+}
+
+.logo-large {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #DE4B44;
+    cursor: pointer;
+    line-height: 60px;
+    font-size: 3em;
+    font-family: 'Sahitya';
+}
+
+.admin-form-container {
+    font-family: 'Sahitya';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1em;
+    margin-bottom: 20vh;
+    color: #FFF;
+}
+
+.admin-form-title {
+    font-family: 'Sahitya';
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #FFF;
+}
+
+.admin-input-container {
+    align-items: flex-start;
+    width: 300px;
+    margin: 20px;
+}
+
+.admin-btn-action {
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #DE4B44;
+    box-shadow: 1px 4px 20px #00000016;
+    color: #FFF;
+    font-size: 1.2em;
+    font-family: 'Sahitya';
+    margin: 20px;
+    cursor: pointer;
+}
+
+.admin-btn-action:hover {
+    background-color: #9F2B25;
+    transition: .3s;
+}

@@ -20,8 +20,6 @@ export default function Entrar() {
     const [emailErrorMessage, setEmailErrorMessage] = useState('')
     const [phoneErrorMessage, setPhoneErrorMessage] = useState('')
     const [passwordErrorMessage, setPasswordErrorMessage] = useState('')
-    
-   
 
     let [invalidEmailCount, setInvalidEmailCount] = useState(0)
 
